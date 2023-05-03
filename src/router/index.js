@@ -86,6 +86,7 @@ router.beforeEach((to) => {
     // to and from are both route objects. must call `next`.
     if(to.meta.requiresAuth && !window.user){
         return {name:'login',query:{redirect:to.fullPath}}
+        // return {name:'login'}
     }
 })
 
