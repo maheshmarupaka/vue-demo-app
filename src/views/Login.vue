@@ -21,6 +21,7 @@ const route = useRoute()
 
 const login = ()=>{
     window.user = username.value
+    window.password = password.value
     const redirectPath = route.query.redirect || '/protected'    
     router.push(redirectPath)
     // router.push({name:'protected'})

@@ -14,6 +14,7 @@ const routes = [
     // {path:"/jamaica",name:"Jamaica",component:()=>import(/*webpackChunkName: "jamaica" */"@/views/Jamaica.vue")},
     // {path:"/panama",name:"Panama",component:()=>import(/*webpackChunkName: "panama" */"@/views/Panama.vue")},
     {path:"/",name:"Home",component:Home},
+    // {path:"/home",name:"Home",component:Home},
     {path:"/protected",
     name:"protected",
     component:()=>import("@/views/Protected.vue"),
@@ -84,7 +85,7 @@ const router = createRouter({
 
 router.beforeEach((to) => {
     // to and from are both route objects. must call `next`.
-    if(to.meta.requiresAuth && !window.user){
+    if(to.meta.requiresAuth && (!window.user && !window.password)){
         return {name:'login',query:{redirect:to.fullPath}}
         // return {name:'login'}
     }
