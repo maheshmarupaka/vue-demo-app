@@ -30,6 +30,21 @@ const routes = [
         }
     },
     {
+        path:'/pinia',
+        name:'pinia',
+        component:()=>import('@/views/Pinia.vue')
+    },
+    {
+        path:'/table',
+        name:'table',
+        component:()=>import('@/components/Table.vue')
+    },
+    {
+        path:'/vue-data-table',
+        name:'vue-data-table',
+        component:()=>import('@/components/VueDataTable.vue')
+    },
+    {
         path:'/login',
         name:'login',
         component:()=>import('@/views/Login.vue')
@@ -46,6 +61,7 @@ const routes = [
         const exists = sourceData.destinations.find(
             (destination)=>destination.id === parseInt(to.params.id)
         )
+        // console.log('exists',exists)
         if(!exists) return {
             name:"NotFound",
             params:{pathMatch:to.path.split('/').slice(1)},

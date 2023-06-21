@@ -8,10 +8,19 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@bhplugin/vue3-datatable": "^1.0.2",
     "axios": "^1.4.0",
+    "bootstrap": "^5.2.3",
     "core-js": "^3.8.3",
+    "datatables.net": "^1.13.4",
+    "datatables.net-select": "^1.6.2",
+    "datatables.net-vue3": "^2.1.0",
+    "jquery": "^3.7.0",
+    "lodash": "^4.17.21",
+    "pinia": "^2.0.36",
     "vee-validate": "^4.8.6",
     "vue": "^3.2.13",
+    "vue-datatables-net": "^2.0.1",
     "vue-router": "^4.1.6"
   },
   "devDependencies": {

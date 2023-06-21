@@ -18,6 +18,7 @@ const username = ref('')
 const password = ref('')
 const router = useRouter()
 const route = useRoute()
+const userInfo = ref({})
 
 const login = ()=>{
     window.user = username.value
@@ -25,6 +26,9 @@ const login = ()=>{
     const redirectPath = route.query.redirect || '/protected'    
     router.push(redirectPath)
     // router.push({name:'protected'})
+    userInfo.value.name = window.user
+    userInfo.value.password = window.password
+    console.log("user info",userInfo.value)
 }
 // export default {
     
