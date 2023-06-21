@@ -7,6 +7,9 @@
     {{destination.name}}
     </router-link>
     <router-link :to="{name:'protected'}">Dashboard</router-link>
+    <router-link :to="{name:'pinia'}">Pinia</router-link>
+    <router-link to="/table">Table</router-link>
+    <router-link to="/vue-data-table">Vue DataTable</router-link>
     </div>
 </template>
 <script setup>

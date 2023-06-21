@@ -21,35 +21,12 @@
 </div>
 </template>
 
-<script>
+<script setup>
 // import HelloWorld from './components/HelloWorld.vue'
 // import Counter from './components/Counter.vue'
 // import CounterComposition from './components/CounterComposition.vue'
 import Navigation from './views/TheNavigation.vue'
-export default {
-  name: 'App',
-  components: {
-    // HelloWorld
-    // Counter,
-    // CounterComposition
-    Navigation
-  },
-  data(){
-    return{
-      // count:100,
-      // title:"Props are passing"
-    }
-  },
-   methods: {
-        // increment:function(){
-        //    this.count++
-        // },
-        // reset(event){
-        //   console.log("received event value : ", event)
-        //   this.count = event
-        // }
-    },
-}
+
 </script>
 
 <style lang="css">
